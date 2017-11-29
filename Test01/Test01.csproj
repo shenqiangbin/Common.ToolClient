@@ -76,6 +76,12 @@
     <Content Include="Lib\MySql.Data.dll" />
     <Content Include="Lib\MySqlDAO.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyHtmlSanitizer\MyHtmlSanitizer.csproj">
+      <Project>{046b10c7-d8a0-40a2-a838-b3f6b5b5cb42}</Project>
+      <Name>MyHtmlSanitizer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

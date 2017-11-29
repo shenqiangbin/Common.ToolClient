@@ -13,9 +13,10 @@ namespace Test01
     {
         static void Main(string[] args)
         {
-            var batchFileRe = new BatchFileRepository();
-            var result = batchFileRe.GetBatchFile();
-
+            //var batchFileRe = new BatchFileRepository();
+            //var result = batchFileRe.GetBatchFile();
+            var str = MyHtmlSanitizer.MyHtmlSanitizer.Sanitize("<span mingan-type='name'>123</span>");
+            Console.ReadKey();
         }
     }
 

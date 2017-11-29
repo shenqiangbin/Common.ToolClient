@@ -14,6 +14,7 @@ namespace MyHtmlSanitizer
         {
             Dictionary<string, object> infoListCopy = new Dictionary<string, object>();
             var htmlSan = new Ganss.XSS.HtmlSanitizer();
+            htmlSan.AllowedAttributes.Add("mingan-type");
             foreach (var item in dic.Keys)
             {
                 infoListCopy.Add(item, htmlSan.Sanitize(dic[item].ToString()));
@@ -23,7 +24,9 @@ namespace MyHtmlSanitizer
 
         public static string Sanitize(string content)
         {
-            return new Ganss.XSS.HtmlSanitizer().Sanitize(content);
+            var santizer = new Ganss.XSS.HtmlSanitizer();
+            santizer.AllowedAttributes.Add("mingan-type");
+            return santizer.Sanitize(content);
         }
     }
 }
